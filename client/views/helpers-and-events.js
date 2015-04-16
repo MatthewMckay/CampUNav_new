@@ -79,18 +79,23 @@ if(Meteor.isClient) {
         }
     });
 
-    Template.MyRoomsLayout.helpers({
-        x: function () {
-            var x = Rooms.find({}, {
-                _id: 0,
-                building: 1,
-                roomNum: 0,
-                roomID: 0,
-                latitude: 0,
-                longitude: 0
-            }).fetch();
-            return x.valueOf();
+    Template.dept.helpers({
+        Dept: function () {
+            var courses = Courses.find().fetch();
+            var distinctDepts = _.uniq(courses, false, function(d){
+                return d.department
+            });
+            var Depts = _.pluck(distinctDepts, 'department');
+            console.log(Depts);
+            return Depts;
         }
     });
+  /*  Template.dept.distinct_dept = function() {
+        var disDept = _.uniq(Courses.find({}, {sort: {department:1}, fields: {department:true}}).fetch().map(function(x) {
+            return x.department;
+        }), true);
+        console.log(disDept);
+        return 'bull';
+    }*/
     /*-------------------------------------------------------END MY ROOMS PAGE JS */
 }

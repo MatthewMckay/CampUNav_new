@@ -4,9 +4,7 @@
     <title>CampUNav</title>
 </head>
 <template name="MyRoomsLayout">
-    <body class="lgbody">{{#each x}}
-    {{x}}
-    {{/each}}
+    <body class="lgbody">
     <div style="height: 100%; width: 100%; background: rgba(73,32,126,.9); overflow: scroll;">{{x}}
       {{> yield "header"}}
       {{> yield "form"}}
@@ -25,10 +23,7 @@
     <form id="bldgRmSrch">
         <label style="color: #00f030;">Department</label>
         <select>
-            <option>CM</option>
-            <option>CSC</option>
-            <option>MATH</option>
-            <option>MILS</option>
+                {{> dept}}
         </select>
         <label style="color: #00f030;">Course</label>
         <select>
@@ -100,3 +95,10 @@
     </p>
 </template>
 <!-- END FOOTER TEMPLATE -->
+
+<template name="dept">
+    {{#each Dept}}
+        <option>{{department}}</option>
+        <script>console.log('success');</script>
+    {{/each}}
+</template>
