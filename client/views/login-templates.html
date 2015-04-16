@@ -1,0 +1,40 @@
+
+<!--  THIS IS THE LOGIN LAYOUT -->
+<template name="LoginLayout">
+    <body class="lgbody">
+    {{> yield "header"}}
+
+    <div class="lgcontent">
+      {{> yield "rg"}}
+
+      {{> yield}}
+    </div>
+    </body>
+</template>
+<!-- END LOGIN LAYOUT -->
+
+
+<!-- LOGIN BODY TEMPLATES -->
+<template name="register">
+    <div class="card">
+        <form class="input-group">
+            <label for="rEml"></label>
+            <input type="email" id="rEml" placeholder="Enter a valid email">
+            <input type="password" id="rPwd" placeholder="Enter a password">
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</template>
+
+<template name="login">
+    <div class="card">
+        <form class="input-group">
+            <input type="email" id="lEml" placeholder="Enter your email">
+            <input type="password" id="lPwd" placeholder="Enter your password">
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</template>
+<!-- LOGIN BODY TEMPLATES -->
+
+

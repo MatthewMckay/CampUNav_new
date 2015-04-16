@@ -1,0 +1,41 @@
+
+<!-- MAP ROUTE LAYOUT -->
+<template name="mapPage">
+  {{> yield}}}
+</template>
+<!-- END MAP ROUTE LAYOUT -->
+
+
+
+<!-- MAP VIEW AND FUNCTIONALITY -->
+<template name="lockMap">
+    <head>
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+        <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    </head>
+    <div class="map-div">
+        <div id="map"></div>
+    </div>
+    <script>
+        var map = L.map('map').setView([30.41338,-91.1817], 19);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 22,
+            minZoom: 17
+        }).addTo(map);
+        //L.tileLayer('http://matthewmckay2015.s3-website-us-west-2.amazonaws.com/Lock3-2/{z}/{x}/{y}.png', {
+
+        L.tileLayer('/lockett-hall/{z}/{x}/{y}.png', {
+            maxZoom: 21,
+            minZoom: 19,
+            opacity: 0.85
+        }).addTo(map);
+
+        function onMapClick(e) {
+            alert("You clicked the map at " + e.latlng);
+        }
+
+        map.on('click', onMapClick);
+
+    </script>
+</template>
+<!-- END MAP VIEW -->

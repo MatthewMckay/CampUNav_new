@@ -1,0 +1,113 @@
+/*-----------------------------login styles-------------------------*/
+.lgcontent {
+    margin: 100px auto auto;
+    width: 99%;
+}
+
+.lgbody {
+    background-image: url("/public/tiger640X1136.png");
+}
+/*----------------------------end login styles-----------------------*/
+
+
+/*-----------------------------common styles-------------------------*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.top-bar {
+    height: 48px;
+    color: white;
+    width: 99%;
+    margin: 1% auto auto;
+    background-color: rgba(0,30,60,.8);
+    align-content: center;
+    padding-top: 14px;
+}
+
+.logout {
+    margin-top: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    border: 1px solid #00f030;
+    background: transparent;
+    color: #00f030;
+    font-size: 12px;
+    font-weight: lighter;
+    -webkit-transition: width 250ms, height 250ms, border-radius 250ms, backgroud-color 250ms, font-size 250ms, color 250ms;
+    transition: width 250ms, height 250ms, border-radius 250ms, backgroud-color 250ms, font-size 250ms, color 250ms;
+}
+.logout:hover {
+    margin-top: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 1px solid #00f030;
+    background-color: #501000;
+    color: #000000;
+    font-size: 16px;
+    font-weight: lighter;
+}
+.CUN-title {
+    text-align: center;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 16px;
+    color: rgba(8,255,80,.9);
+    font-weight: lighter;
+}
+/*---------------------------end common styles------------------------*/
+
+
+/*-----------------------------myrooms styles-------------------------*/
+.li-l {
+    padding: 20px 20px;
+}
+
+.list-bar{
+    background: linear-gradient(top, rgba(253,208,35,.6) 0%, rgba(253,208,35,.3) 100%);
+    background: -moz-linear-gradient(top, rgba(253,208,35,.6) 0%, rgba(253,208,35,.3) 100%);
+    background: -webkit-linear-gradient(top, rgba(253,208,35,.6) 0%, rgba(253,208,35,.3) 100%);
+    box-shadow: 0 0 9px rgba(0,0,0,0.15);
+    padding: 0 0;
+    border-radius: 10px;
+    list-style: none;
+    position: relative;
+    margin: 0;
+}
+
+.list-frame {
+    overflow: hidden;
+    height: 0;
+    width: 350px;
+    background-color: rgba(0,240,48,.1);
+    border-left: 1px solid rgba(0,240,48,.1);
+    border-right: 1px solid rgba(0,240,48,.1);
+    margin-left: 20px;
+    transition: height 250ms;
+}
+/*-----------------------------end myrooms styles-------------------------*/
+
+
+/*-----------------------------map styles---------------------------------*/
+#map {
+    height: 600px;
+    width:  90%;
+    margin: 9px auto auto;
+    border: 2px solid #a1a1a1;
+}
+
+.map-div {
+    height: 620px;
+    width:  95%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #00f030;
+    border-radius: 10px;
+    background-color: #000000;
+}
+/*-----------------------------end map styles-----------------------------*/

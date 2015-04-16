@@ -1,0 +1,12 @@
+{
+  "name": "lockett-hall",
+  "version": "1.0.0",
+  "description": "",
+  "type": "overlay",
+  "format": "png",
+  "minzoom": "19",
+  "maxzoom": "21",
+  "bounds": "-91.18299476,30.41163639,-91.18058258,30.41500983",
+  "scale": "1",
+  "profile": "mercator"
+}
